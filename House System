@@ -1,0 +1,19 @@
+class House{
+    constructor(owner,room,price){
+           this.owner=owner;
+           this.room=room;
+           this.price=price;
+    }
+    describe(){
+        return `${this.owner} owns a house with ${this.room} rooms and price ${this.price}`;
+    }
+}
+class LuxuryHouse extends House{
+       showLuxury(){
+        return `This is a luxury house owned by ${this.owner}`;
+       }
+}
+let house = new House("sara",4,200000);
+console.log(house.describe());
+let luxury=new LuxuryHouse("Dalaa",20,100000000);
+console.log(luxury.showLuxury());
